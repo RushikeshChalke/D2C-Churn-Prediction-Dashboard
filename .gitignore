@@ -12,7 +12,7 @@ venv/
 data/*.csv
 data/*.xlsx
 outputs/*.xlsx
-
+data/online_retail_II.csv
 # Mac
 .DS_Store
 

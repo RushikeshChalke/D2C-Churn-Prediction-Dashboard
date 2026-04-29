@@ -37,7 +37,7 @@ def load_data(path=None):
         path = DATA_PATH
 
     print(f"⏳ Loading data from: {path}")
-    df = pd.read_csv(path, encoding=ENCODING)
+    df = pd.read_csv(path, encoding=ENCODING, dtype={'Invoice': str, 'Customer ID': str})
     print(f"✅ Loaded {len(df):,} rows and {df.shape[1]} columns")
 
     return df
@@ -105,7 +105,7 @@ def clean_data(df):
     # ----------------------------------------
     # Step 7: Fix Customer ID type
     # ----------------------------------------
-    df[CUSTOMER_ID_COLUMN] = df[CUSTOMER_ID_COLUMN].astype(int).astype(str)
+    df[CUSTOMER_ID_COLUMN] = df[CUSTOMER_ID_COLUMN].astype(float).astype(int).astype(str)
     print(f"   Customer ID converted to string ✅")
 
     # ----------------------------------------
