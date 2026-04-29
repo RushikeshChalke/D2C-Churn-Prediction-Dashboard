@@ -271,21 +271,6 @@ elif page == "🎯 Risk Segments":
         use_container_width=True
     )
 
-    # Download button
-    st.download_button(
-        label="📥 Download This Segment as Excel",
-        data=open(
-            os.path.join(
-                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                'outputs',
-                'churn_risk_report.xlsx'
-            ),
-            'rb'
-        ).read(),
-        file_name="churn_risk_report.xlsx",
-        mime="application/vnd.ms-excel"
-    )
-
 
 # ================================================
 # PAGE 3: CUSTOMER LOOKUP
